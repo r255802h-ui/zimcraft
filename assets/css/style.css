@@ -1,0 +1,273 @@
+/* ZIMCRAFT - MAIN STYLES */
+
+/* 1. Website colours */
+:root {
+    --green: #244c3c;
+    --orange: #d87842;
+    --cream: #f8f5ed;
+    --white: #fffdf8;
+    --text: #25251f;
+    --grey: #6d6d63;
+}
+
+/* 2. General settings */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2 {
+    font-family: Georgia, serif;
+}
+
+/* 3. Navigation bar */
+.site-header {
+    padding: 22px 7%;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9e2d5;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a:hover {
+    color: var(--orange);
+}
+
+/* 4. Homepage hero section */
+.hero {
+    padding: 80px 9%;
+    min-height: 450px;
+    background: #eee9dc;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 45px;
+    max-width: 600px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-text {
+    max-width: 480px;
+    line-height: 1.8;
+    color: var(--grey);
+}
+
+/* 5. Buttons */
+.button {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    padding: 13px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #18392c;
+}
+
+/* 6. Page headings */
+.page-heading {
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+.page-heading h1 {
+    font-size: 38px;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* 7. Craft categories */
+.section-wrap {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 25px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e9e2d5;
+}
+
+/* 8. Discover and seller cards */
+.market-grid {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 25px 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.market-card, .detail-card, .about-panel {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e9e2d5;
+}
+
+.market-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.market-card h2 {
+    margin-bottom: 10px;
+}
+
+.market-card p {
+    color: var(--grey);
+    line-height: 1.7;
+}
+
+.card-location {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.tag {
+    background: #edf2ed;
+    color: var(--green);
+    padding: 7px 12px;
+    border-radius: 20px;
+}
+
+/* 9. Filter form */
+.filter-panel {
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-panel label {
+    display: grid;
+    gap: 8px;
+}
+
+select, input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font: inherit;
+}
+
+/* 10. Seller details */
+.detail-card {
+    max-width: 750px;
+    margin: 40px auto;
+    line-height: 1.8;
+}
+
+.detail-card img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detail-info {
+    background: var(--cream);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* 11. Contact buttons */
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* 12. Footer */
+.site-footer {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* 13. Mobile phone layout */
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 45px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .feature-grid,
+    .market-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-panel {
+        margin: 15px;
+    }
+
+    .detail-card {
+        margin: 20px 15px;
+    }
+}
