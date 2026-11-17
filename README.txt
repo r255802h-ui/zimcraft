@@ -64,7 +64,3 @@ about.php     Project explanation
 includes/     Shared database connection, header and footer
 assets/       CSS design and JavaScript
 
-DEFENCE TIP
-Explain that this is a directory, not an online shop. It helps visitors discover craft
-markets. It does not process payments or require user accounts, keeping the second-year
-project manageable.
